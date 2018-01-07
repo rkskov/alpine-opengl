@@ -10,6 +10,8 @@ ENV HOME=/root \
 	DISPLAY_WIDTH=1024 \
 	DISPLAY_HEIGHT=768
 
+# x11vnc is in testing repo
+RUN echo “http://dl-3.alpinelinux.org/alpine/edge/testing” >> /etc/apk/repositories
 RUN apk update 
 RUN apk add —no-cache mesa mesa-demos fluxbox \ 
     git socat supervisor x11vnc xterm xvfb
