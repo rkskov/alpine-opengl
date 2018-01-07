@@ -10,7 +10,8 @@ ENV HOME=/root \
 	DISPLAY_WIDTH=1024 \
 	DISPLAY_HEIGHT=768
 
-RUN apk add —no-cache mesa mesa-demos fluxbox git socat supervisor x11vnc xterm xvfb
+RUN apk —update —upgrade add —no-cache mesa mesa-demos fluxbox \ 
+    git socat supervisor x11vnc xterm xvfb
 
 # Clone noVNC from github
 RUN git clone https://github.com/kanaka/noVNC.git /root/noVNC \
